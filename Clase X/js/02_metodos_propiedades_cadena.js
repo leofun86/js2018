@@ -36,7 +36,7 @@ document.write('Evaluación de cadena final + longitud: '+cadena.endsWith('Mundo
 document.write('Búsqueda de parámetro: '+cadena.includes('H')+'<br>');
 document.write('Búsqueda de parámetro + posición inicial: '+cadena.includes('H', 1)+'<br>');
 //repeat: repite un string el número de veces que se desee
-document.write('Búsqueda de parámetro: '+cadena3.repeat(3)+'<br>');
+document.write('Repetición de cadena: '+cadena3.repeat(3)+'<br>');
 //Template Strings: Forma de concatenar texto con variables en una cadena completa
 let nombre="Leo";
 let apellido="Apellido";
