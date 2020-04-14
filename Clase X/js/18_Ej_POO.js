@@ -5,12 +5,8 @@ class Libro {
     this.año = año;
     this.genero = genero;
   }
-  generoLibro() {
-    return this.genero;
-  }
-  autores() {
-    return this.autor;
-  }
+  generoLibro() { return this.genero; }
+  autores() { return this.autor; }
   infoLibro () {
     return `Libro: ${this.titulo}\nAutor: ${this.autor}\nAño: ${this.año}\nGénero: ${this.genero}`;
   }
