@@ -38,8 +38,49 @@ numberos.forEach((num, i)=>document.write(`El número ${num} está en la posici�
 const numberas = [12, 41, 23, 65, 98, 1];
 document.write(numberas[0]+'<br>');
 document.write(numberas.some(hola => hola.toString().length > 1)+'<br>');
-//MAP:
+//MAP: permite aplicar una acción a cada valor de un array y almacenarlo en uno nuevo
 const numeres = [1, 2, 3, 4, 5];
-let num = [];
-numeres.forEach(n=>num.push(n));
-num.forEach((n, i)=>document.write(`Valor ${i} ==> ${n}<br>`));
+const arry = numeres.map(num => num * 2);
+document.write('Array original: '+numeres.join(', ')+'<br>Array on map: '+arry.join(', ')+'<br>');
+//FILTER: Filtra todos los elementos del array que cumplan la condición y devuelve un nuevo array
+const nn = numeres.filter(num => num != 2);
+document.write(`Array sin filter: ${numeres}<br>Array nuevo con filter: ${nn}<br>`);
+//REDUCE: reduce todos los valores de un array a un único valor
+document.write(`Array sin reduce: ${numberos}<br>Array con reduce (cálculo de media): ${(numberos.reduce((a, b)=>(a+b)).toFixed(2))/numberos.length}<br>`);
+  //Aplicación práctica
+  const users = [
+    {
+      nombre: 'user1',
+      online: true
+    },
+    {
+      nombre: 'user2',
+      online: true
+    },
+    {
+      nombre: 'user3',
+      online: false
+    },
+    {
+      nombre: 'user4',
+      online: true
+    },
+    {
+      nombre: 'user5',
+      online: false
+    },
+    {
+      nombre: 'user6',
+      online: true
+    }
+  ];
+let off = 0;
+let on =0;
+const userOnline = users.reduce((cont, user) => {
+  if (user.online) {cont++;on++;};
+  if (!user.online) off++;
+  return cont;
+},0);
+console.log(`Online: ${on}`);
+console.log(`Offline: ${off}`);
+document.write(`Hay ${userOnline} usuarios conectados y ${off} usuarios desconectados`);
