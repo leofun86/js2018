@@ -1,4 +1,3 @@
-
 let palabra = 'hola MUNDO';
 let array = Array.from(palabra);
 console.log(array);
