@@ -1,71 +1,85 @@
-const title = document.getElementById('title');
-const list = document.getElementById('list');
-const list2 = document.getElementById('list2');
-const parrafo = document.getElementById('parrafo');
-const newEl = document.createElement('li');
-newEl.textContent='Soy el nuevo elemento 1';
-
-
-//INSERTAR EN POSICIÓN ESPECÍFICA
-  //list.insertBefore(newEl, list.firstChild);
-/*INSERTAR EN POSICIÓN ESPECÍFICA (avanzado)
-  - parent.insertAdjacentElement(posición, elemento)
-  - parent.insertAdjacentHTML(posición, html)
-  - parent.insertAdjacentText(posición, texto)
-  POSICIÓN
-    - beforebegin: Antes de que empiece (hermano anterior)
-    - afterbegin: Después de que comience (primer hijo)
-    - beforeend: Antes de que acabe (último hijo)
-    - afterend: Después de que acabe (hermano siguiente)
+/*OBJETOS NATIVOS
+  - window: Es el objeto global, de él descienden todos los objetos
   */
-  list.children[1].insertAdjacentElement('afterbegin', newEl);
-  //Elemento HTML después de comenzar el elmento padre LIST
-  list.insertAdjacentHTML('afterbegin', '<h4>Elemento HTML H1</h4>');
-  //Elemento HTML antes de comenzar el elemento padre LIST
-  list.insertAdjacentHTML('beforebegin', '<li>Elemento HTML LI</li>');
-  //Texto después de comenzar el elemento padre P
-  parrafo.insertAdjacentText('afterbegin', 'Elemento Texto');
-/*REEMPLAZAR ELEMENTOS
-  parent.replaceChild(newChild, oldChild);
-  */
-  newEl.textContent='Elemento Reemplazado';
-  list.replaceChild(newEl, list.children[2]);
-
-//NUEVAS MANERAS DE INSERCIÓN
+  //Ejemplo
+  document.write('Hola Mundo<br>');
+  /*Es equivalente a ==> */window.document.write('Hola Mundo<br><br>');
   /*
-  - parent.before(): Antes de que comience el elemento padre (hermano anterior)
-  - parent.prepend(): Después de que empiece el elemento padre (primer hijo)
-  - parent.append(): Antes de que acabe el elemento padre (último hijo)
-  - parent.after(): Después de que termine el elemento padre (hermano siguiente)
+  - console: es el que contiene la consola del navegador
+  VER MÁS: https://developer.mozilla.org/es/docs/Web/API/Console
+    - console.table(): devuelve la información de objetos / arrays en formato de tabla
+    - console.error(): devuelve un mensaje de error
+  */
+  //Ejemplo
+  console.log('Hola Mundo');
 
-  - child.replaceWith(newChild)
+  const person = {
+    Nombre: 'Leandro Funes',
+    Edad: 33,
+    Dir: 'Anzani 2129 apt 001',
+    Padre: 'Raul Funes',
+    Madre: 'Elena Vilariño'
+  }
+  console.table(person);
+  /*Location: objeto que contiene la barra de direcciones
+  VER MÁS: https://developer.mozilla.org/es/docs/Web/API/Location
+    - location.href
+    - location.protocol
+    - location.host
+    - location.pathname
+    - location.hash
+    - location.reload()
   */
-  const newEl2 = document.createElement('li');
-  const newEl3 = document.createElement('li');
-  const newEl4 = document.createElement('li');
-  const newEl5= document.createElement('li');
-  const newEl6= document.createElement('li');
-  newEl2.textContent='Soy el nuevo elemento 2';
-  newEl3.textContent='Soy el nuevo elemento 3';
-  newEl4.textContent='Soy el nuevo elemento 4';
-  newEl5.textContent='Soy el nuevo elemento 5';
-  newEl5.textContent='Soy el nuevo elemento 6';
-  list2.before(newEl2);
-  list2.children[1].prepend(newEl3);
-  list2.append(newEl4);
-  list2.firstChild.after(newEl5);
-  document.write(list2.getElementsByTagName('li').length);
+  //Ejemplo
+  console.log(location.href);
+  console.log(location.protocol);
+  console.log(location.host);
+  console.log(location.pathname);
+  console.log(location.hash);
+  console.log(location.reload);
+  location.hash = 3;
 
-//CLONAR NODOS
   /*
-  - element.cloneNode(true|false): Clona el nodo. Si le pasamos TRUE clona todo el elemento con los hijos, y si le pasamos FALSE clona el elemento sin los hijos
+  addEventListener('load', () => {
+    switch(location.hash) {
+      case '#1':
+        document.write('Hola');
+      break;
+      case '#2':
+        document.write('Chau');
+      break;
+      default: document.write('No hay hash');
+    }
+  });
   */
-  list2.after(list.cloneNode(true));
-  list.children[1].prepend(list2.cloneNode(true));
-//ELIMINAR NODOS
-  /*
-  - element.remove(): Elimina el nodo del DOM
-  - element.removeChild(): Elimina el nodo hijo del DOM
+  //location.href = 'https://google.com';
+  /*History: permite desplazamiento en el historial de una pestaña
+    - history.back()
+    - history.forward()
+    - history.go(-n | n)*/
+  document.write('<button type="button" id="btn">Back</button>');
+  document.write('<button type="button" id="btn2">Forward</button>');
+  const btn = document.getElementById('btn');
+  const btn2 = document.getElementById('btn2');
+  btn.addEventListener('click', () => {
+    history.back();
+  });
+  btn2.addEventListener('click', () => {
+    history.forward();
+  });
+  console.log('Historial: '+history.length);
+  //console.table(history);
+  /*Date: objeto que maneja fechas
+  VER MÁS: https://www.w3schools.com/js/js_date_methods.asp
   */
-  list.children[1].remove();
-  list2.removeChild(list2.children[0]);
+  let date = new Date();
+  console.log(date.getDate());
+
+/*TIMERS
+  */
+document.write('<button id="btn3">TimeOut</button>');
+const btn3 = document.getElementById('btn3');
+const saludar = () => { document.write('Hola'); }
+btn3.addEventListener('click', () => {
+  setTimeout(saludar, 1000);
+});
