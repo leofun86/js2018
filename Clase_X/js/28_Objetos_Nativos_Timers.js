@@ -79,7 +79,27 @@
   */
 document.write('<button id="btn3">TimeOut</button>');
 const btn3 = document.getElementById('btn3');
-const saludar = () => { document.write('Hola'); }
+const saludar = () => {
+  let rand = Math.round(Math.random()*2000+1);
+  console.log(`Número random: ${rand}`);
+  setTimeout(() => alert('Hola'), rand);
+}
+let rand = Math.round(Math.random()*2000+1);
+const saludar2 = setTimeout(() => {
+  console.log(`Número random: ${rand}`);
+  alert('Hola');
+},3000);
+
 btn3.addEventListener('click', () => {
-  setTimeout(saludar, 1000);
+  clearTimeout(saludar2);
+  console.log(`Timeout desactivado`);
 });
+
+const puchi = setInterval(()=>{
+  let randi = Math.round(Math.random()*50+1);
+  console.log(randi)
+}, 500);
+
+document.write('<button id="btn4">Stop Interval</button>');
+const btn4 = document.getElementById('btn4');
+btn4.addEventListener('click', () => clearInterval(puchi));
