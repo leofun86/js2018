@@ -1,13 +1,7 @@
 //UNA PROMESA es un objeto que tiene dos callbacks internos
-const users = [
-  { id:1, name:'Leo' },
-  { id:2, name:'Ana' },
-  { id:3, name:'Seba' }
-];
-const emails = [
-  { id:1, email:'leorecord@hotmail.com' },
-  { id:2, email:'anapsico@hotmail.com' }
-];
+const users = [ { id:1, name:'Leo' }, { id:2, name:'Ana' }, { id:3, name:'Seba' } ];
+const emails = [ { id:1, email:'leorecord@hotmail.com' }, { id:2, email:'anapsico@hotmail.com' } ];
+
 const getUser = (id) => {
   const user = users.find(user => user.id == id);
   //Construcción de una promesa
