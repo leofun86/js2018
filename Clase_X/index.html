@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
   </head>
   <body>
       <!-- 21_DOM1
@@ -237,6 +238,101 @@
         ###@lalo.ru
       </p>
       -->
-      <script src="js/46_Api_WebStorage.js"></script>
+      <!-- 46_API_WebStorage
+      <style>
+        .form_field {
+          margin-bottom:20px;
+        }
+        .form_label {
+          display:inline-block;
+          width:55px!important;
+          //border:1px solid red;
+        }
+      </style>
+      <form id="form" class="form">
+        <div class="form_field">
+          <div class="form_label"><label for="key">Key</label></div>
+          <input type="text" id="key" name="key">
+        </div>
+        <div class="form_field">
+          <div class="form_label"><label for="value">Value</label></div>
+          <input type="text" id="value" name="value">
+        </div>
+        <div class="form_field">
+          <input type="submit" value="Dale">
+        </div>
+        <div id="info" class="info">
+          <select name="keys" id="keys">
+            <option value="default">Select key</option>
+          </select>
+          <p id="infoValue"></p>
+        </div>
+        <div class="form_field">
+          <button id="clear">Limpiar</button>
+          <button id="remove">Quitar</button>
+        </div>
+      </form>
+      -->
+      <!-- 28_Api_Drag&Drop
+      <style>
+        body {
+          background-color: #adffa3;
+        }
+        .smile {
+          width:150px;
+        }
+        .drop {
+          border: 2px dashed black;
+          padding: 60px 0px;
+          text-align:center;
+        }
+      </style>
+      <img id="smile" class="smile" src="assets/smile.png" alt="Smile Face"><br><br><br><br>
+      <div id="drop" class="drop">Drop Zone</div>
+      -->
+      <!-- 48_Api_Drag&Drop_2
+      <style>
+        body { background-color:#ffa3ce; }
+        .pending_tasks, .finished_tasks {
+          background-color:#75fff2;
+          text-align:center;
+          width:49%;
+          float:left;
+          margin:3px;
+          min-height:120px;
+        }
+        .task {
+          border:1px solid #666;
+          margin:1px 0px;
+          background-color:#ba75ff;
+          padding:20px 0px;
+        }
+        .task:hover {
+          cursor:grab;
+        }
+        .active {
+          background:white;
+        }
+      </style>
+      <div class="container">
+        <div id="pending_tasks" class="pending_tasks">
+          <h2 class="title">Pending Tasks</h2>
+          <hr>
+          <div id="task-1" class="task" draggable="true">Task 1</div>
+          <div id="task-2" class="task" draggable="true">Task 2</div>
+          <div id="task-3" class="task" draggable="true">Task 3</div>
+          <div id="task-4" class="task" draggable="true">Task 4</div>
+          <div id="task-5" class="task" draggable="true">Task 5</div>
+        </div>
+        <div id="finished_tasks" class="finished_tasks">
+          <h2 class="title">Finished Tasks</h2>
+          <hr>
+        </div>
+      </div>
+      -->
+      <!-- 
+
+      -->
+      <script src="js/49_Api_File.js"></script>
   </body>
 </html>
