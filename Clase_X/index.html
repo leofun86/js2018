@@ -3,7 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-
+    <style>
+    /*Creación de variable que se utilizará en JavaScript*/
+    :root { --bar-width:0%; }
+    body { background-color:#444; }
+      .loadBar {
+        width:300px;
+        background:#ddd;
+        height:10px;
+        position:relative;
+        margin: 1rem 0;
+      }
+      .loadBar::after {
+        content:'';
+        display:block;
+        position:absolute;
+        top:0;left:0;
+        background-color:green;
+        width: var(--bar-width);
+        height:10px;
+      }
+      .progress {
+        display:block;
+        background-color: green;
+        height: 10px;
+        width:100%;
+      }
+    </style>
   </head>
   <body>
       <!-- 21_DOM1
@@ -330,9 +356,14 @@
         </div>
       </div>
       -->
-      <!-- 
-
-      -->
+      <input type="file" id="file" style="display:block;"><br>
+      <div id="loadBar" class="loadBar">
+        <span id="progress" class="progress"></span>
+      </div>
+      <div id="loadBar" class="loadBar"></div>
+      <div id="images" style="display:block;"></div>
+      <img id="img" style="max-width:400px;display:block;"><br>
+      <p id="text" style="color:white;"></p>
       <script src="js/49_Api_File.js"></script>
   </body>
 </html>
