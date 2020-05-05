@@ -13,7 +13,7 @@ const images = document.getElementById('images');
 const progress = document.getElementById('progress');
 
 /* BARRA DE PROGRESO */
-  /* DIV CON SPAN
+  /*DIV CON SPAN*/
   file.addEventListener('change', (e) => {
     const file = e.target.files[0];
     const fileReader = new FileReader();
@@ -30,7 +30,7 @@ const progress = document.getElementById('progress');
       text.textContent='¡Cargado correctamente!';
     });
   });
-  */
+
   /* DIV */
   //Raíz del archivo => Desde donde accederemos a la variable creada en CSS => --bar--width
   const root = document.documentElement;
