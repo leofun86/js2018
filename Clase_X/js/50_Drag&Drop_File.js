@@ -2,8 +2,13 @@ const file = document.getElementById('file');
 const dropZone = document.getElementById('dropZone');
 const btnSubmit = document.getElementById('upBtn');
 const progress = document.getElementById('progress');
+const txt = document.getElementById('dropZoneText');
 
 btnSubmit.disabled=true;
+dropZone.innerHTML=`
+  <i class="fas fa-file-upload"></i>
+  <p class="dropZoneText" id="dropZoneText">Drop file to upload file</p>
+`;
 file.style.display='none';
 dropZone.addEventListener('click', () => file.click());
 dropZone.addEventListener('dragover', (e) => {
@@ -27,8 +32,10 @@ dropZone.addEventListener('drop', (e) => {
     btnSubmit.style.background='green';
     btnSubmit.style.color='white';
     btnSubmit.disabled=false;
-    console.log('FINALIZADO');
-    console.log(file.files);
+    dropZone.innerHTML=`
+      <i class="fas fa-check-circle"></i>
+      <p class="dropZoneText" id="dropZoneText">¡Load completed!</p>
+    `;
   });
 });
 
