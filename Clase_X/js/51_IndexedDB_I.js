@@ -18,7 +18,7 @@
 //Constante para almacenar el acceso a indexedDB
 const inDB = indexedDB;
 
-if (indexedDB) {
+if (indexedDB && form) {
   //Variable para almacenar la Base de datos.
   let db;
   const sql = indexedDB.open('tasklist', 1);
@@ -27,8 +27,12 @@ if (indexedDB) {
   //Preguntar si existe la base de datos (esto se ejecuta antes de onsuccess)
   sql.onupgradeneeded = () => {
     db = sql.result; console.log('CREATE: ', db);
-    const objectStore = db.createObjectStore('tasks_1');
-    const objectStore2 = db.createObjectStore('tasks_2');
+    const objectStore = db.createObjectStore('tasks', {
+      //Generador de clave autoincremental
+        //autoIncrement: true
+      //Ruta de la llave => clave única (hay que especificar cuál será => perteneciente al objeto DATA (taskTitle))
+      keyPath: 'taskTitle'
+    });
   };
   //Mostrar error
   sql.onerror = (error) => { console.log('ERROR: ', error); };
