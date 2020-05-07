@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      form > label, form > input {
+        display:block;
+      }
+    </style>
   </head>
   <body>
       <!-- 21_DOM1
@@ -504,6 +509,106 @@
         <!-- 53_Api_VisibilityChanged
         <video src="assets/video.mp4" class="video" id="video" controls autoplay muted style="width:400px;"></video>
         -->
-        <script src="js/54_Api_OnlineOffline.js"></script>
+        <!-- 54_Api_OnlineOffline
+        <style>
+          body {
+            margin:0;
+            background-color:#2f3238;
+            color:#fff;
+            font-family: sans-serif;
+          }
+          .ali {
+            position:fixed;
+            width:100%;
+            top:0;left:0;
+            margin:0;
+            padding:0.5rem;
+            text-align:center;
+            transform:translateY(-100%);
+          }
+          .alert--online {
+            background-color:rgba(0,255,0,0.6);
+            animation:reveal 4s ease;
+          }
+          .alert--offline {
+            background-color:rgba(255,0,0,0.6);
+            animation:reveal 4s ease;
+          }
+          @keyframes reveal {
+            0% { transform:translateY(-100%); }
+            15%,
+            85% { transform:translateY(0%); }
+          }
+        </style>
+        <p id="alert" class="ali"></p>
+        -->
+        <!-- 55_Api_IntersectionObserver
+        <style>
+          .box {
+            height:100px;
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            //border:1px solid red;
+            margin-bottom:600px;
+          }
+          .purple { background-color:purple; color:white; }
+          .orange { background-color:orange; color:white; }
+          .green { background-color:green; color:white; }
+          .brown { background-color:brown; color:white; }
+          //.box2, .box3, .box4 { visibility: hidden; }
+        </style>
+        <div id="box1" class="box purple">Box 1</div>
+        <div id="box2" class="box orange">Box 2</div>
+        <div id="box3" class="box green">Box 3</div>
+        <div id="box4" class="box brown">Box 4</div>
+        -->
+        <!-- 56_Api_IntersectionObserver_II
+        <style>
+          .images > img {
+            max-width:100%!important;
+          }
+        </style>
+        <div id="images" class="images"></div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        -->
+        <!-- 57_Api_Geolocation
+        <button id="getLocation">Get Location</button>
+        -->
+        <!-- 58_Api_MatchMedia
+        <style>
+          body {
+            background-color:#2a2a2a;
+            font-family:sans-serif;
+            margin:0;
+            padding-bottom:100rem;
+          }
+          .title {
+            color:#fff;
+            text-align:center;
+          }
+          @media screen and (min-width:400px) {
+            body { background-color:#fff; }
+            .title { color:#2a2a2a; }
+          }
+        </style>
+        <h1 class="title">Matchmedia</h1>
+        -->
+        <!-- 59_Destructuring
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        -->
+        <!-- 60_Debugging
+        <form id="form">
+          <label for="number-1">Number 1</label>
+          <input type="number" name="number1" id="number-1">
+          <label for="number-2">Number 2</label>
+          <input type="number" name="number2" id="number-2">
+          <input type="submit" value="Calculate">
+        </form>
+        <p id="result"></p>
+        -->
+        <script src="js/1_Transpilacion_Codigo_Babel.js"></script>
   </body>
 </html>
