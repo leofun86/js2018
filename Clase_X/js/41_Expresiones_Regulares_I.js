@@ -1,4 +1,6 @@
-/* VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+/*
+VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+HERRAMIENTA: https://regex101.com/
   EXPRESIONES REGULARES
     Son una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadena de caracteres u operaciones de sustituciones.
 

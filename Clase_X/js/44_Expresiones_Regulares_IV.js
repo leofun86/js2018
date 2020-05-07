@@ -1,4 +1,6 @@
-/* VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+/*
+VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+HERRAMIENTA: https://regex101.com/
   EXPRESIONES REGULARES: Caracteres especiales
     \s  Coincide con un caracter de espacio, entre ellos incluídos espacio, tab, salto de página y de línea, y retorno de carro.
       EJ: ^[a-zA-Z]+\s[a-zA-Z]+$

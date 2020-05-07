@@ -1,4 +1,6 @@
-/* VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+/*
+VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+HERRAMIENTA: https://regex101.com/
   EXPRESIONES REGULARES
     COMODINES
     - Sustitución => Define un comodín dentro del patrón. El símbolo es el "." (sin comillas dobles)

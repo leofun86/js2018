@@ -1,4 +1,6 @@
-/* VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+/*
+VER MÁS: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+HERRAMIENTA: https://regex101.com/
   EXPRESIONES REGULARES
     DELIMITADORES
       ^ => Antes de este símbolo no puede haber nada.
