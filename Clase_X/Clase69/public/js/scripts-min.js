@@ -1,0 +1,1 @@
+"use strict";var number=[1,2,3,4],num1=number.num1,num2=number.num2,num3=number.num3,num4=number.num4,result=num1+num4;console.log(result);
